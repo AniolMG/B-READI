@@ -19,8 +19,8 @@ const members = [
     },
     {
         id: 2,
-        nameEN: "Federica Tomassoni",
-        nameES: "Federica Tomassoni",
+        nameEN: "Francesco Tarquini",
+        nameES: "Francesco Tarquini",
         briefEN: "Universita Degli Studi Della'Aquila",
         briefES: "Universita Degli Studi Della'Aquila",
         briefCAT: "Universita Degli Studi Della'Aquila",
@@ -28,7 +28,7 @@ const members = [
         descriptionES: "",
         descriptionCAT: "",
         link: "",
-        email: "federica.tomassoni@guest.univaq.it"
+        email: ""
     },
     {
         id: 3,
@@ -71,8 +71,21 @@ const members = [
     },
     {
         id: 6,
-        nameEN: "Isabel Rego",
-        nameES: "Isabel Rego",
+        nameEN: "Rita Carmo",
+        nameES: "Rita Carmo",
+        briefEN: "Universidade Dos Acores",
+        briefES: "Universidade Dos Acores",
+        briefCAT: "Universidade Dos Acores",
+        descriptionEN: "",
+        descriptionES: "",
+        descriptionCAT: "",
+        link: "",
+        email: ""
+    },
+    {
+        id: 7,
+        nameEN: "Isabel Estrela",
+        nameES: "Isabel Estrela",
         briefEN: "Universidade Dos Acores",
         briefES: "Universidade Dos Acores",
         briefCAT: "Universidade Dos Acores",
@@ -83,7 +96,7 @@ const members = [
         email: "isabel.mc.rego@uac.pt"
     },
     {
-        id: 7,
+        id: 8,
         nameEN: "George Dafoulas",
         nameES: "George Dafoulas",
         briefEN: "Middlesex University",
@@ -96,7 +109,7 @@ const members = [
         email: "g.dafoulas@mdx.ac.uk"
     },
     {
-        id: 8,
+        id: 9,
         nameEN: "Ariadne Tsiakara",
         nameES: "Ariadne Tsiakara",
         briefEN: "Middlesex University",
@@ -109,9 +122,9 @@ const members = [
         email: "a.tsiakara@mdx.ac.uk"
     },
     {
-        id: 9,
-        nameEN: "Cristiano Maia",
-        nameES: "Cristiano Maia",
+        id: 10,
+        nameEN: "Simon",
+        nameES: "Simon",
         briefEN: "Middlesex University",
         briefES: "Middlesex University",
         briefCAT: "Middlesex University",
@@ -119,20 +132,7 @@ const members = [
         descriptionES: "",
         descriptionCAT: "",
         link: "",
-        email: "c.cardosomaia@mdx.ac.uk"
-    },
-    {
-        id: 10,
-        nameEN: "Hans-Liudger Dienel",
-        nameES: "Hans-Liudger Dienel",
-        briefEN: "Technische Universitat Berlin",
-        briefES: "Technische Universitat Berlin",
-        briefCAT: "Technische Universitat Berlin",
-        descriptionEN: "",
-        descriptionES: "",
-        descriptionCAT: "",
-        link: "",
-        email: "hans-liudger.dienel@tu-berlin.de"
+        email: ""
     },
     {
         id: 11,
