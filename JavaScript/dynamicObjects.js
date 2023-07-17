@@ -242,8 +242,8 @@ const intellectualOutputs = [
     {
         id: 6,
         title: "PILOT EXPLOITATION OF INNOVATIVE LEARNING OUTCOME",
-        items: ["mp4Test"],
-        files: ["test.mp4"],
+        items: [],
+        files: [],
         zipName: "zipName_1"
     }
 ]
