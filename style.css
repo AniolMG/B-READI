@@ -13,6 +13,28 @@ ul {
     list-style: none;
 }
 
+li[data-file] span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.files-icon {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#intellectualOutputsGroup li {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.download-all-btn {
+    margin-bottom: 15px;
+}
+
 header {
     height: 100vh;
     width: 100%;

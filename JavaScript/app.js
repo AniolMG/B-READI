@@ -24,21 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-var acc = document.getElementsByClassName("activitiesAccordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
 /*scroll down button*/
 function scrollDown() {
   var element = document.getElementById("container");
@@ -126,14 +111,13 @@ function renderDynamicObjects() {
         </div>
       </div>
     `
-
-
   }
 
   //Partners rendering
   const partnersContainer = document.getElementById("partnersGroup")
   partnersContainer.innerHTML = ""
   for (let partner of partners) {
+    const flagFilename = partner.country.replace(" ", "");
     partnersContainer.innerHTML +=
       `
     <div class="partner">
@@ -143,7 +127,7 @@ function renderDynamicObjects() {
       <div>
         <h4 class="partner-name"><a href="${partner.link}">${partner.name}</a></h4>
         <div class="partner-country">
-          <img src="./imagesB-READI/${partner.country}.png" class="country-flag">
+          <img src="./imagesB-READI/${flagFilename}.png" class="country-flag">
           <span class="lang"><b>${partner.country}</b></span>
         </div>
       </div>
@@ -151,8 +135,108 @@ function renderDynamicObjects() {
     `
   }
 
-  //News with images rendering
+  //Intellectual Outputs rendering
+  const intellectualOutputsContainer = document.getElementById("intellectualOutputsGroup")
+  intellectualOutputsContainer.innerHTML = ""
+  for (let output of intellectualOutputs) {
+    let listItems = ''
+    let counter = 0;
+    for (let item of output.items) {
+      const file = output.files[counter];
+      let icon = '';
+      if (file.endsWith('.pdf')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/pdf.svg" type="image/svg+xml"></object>';
+      } else if (file.endsWith('.xlsx')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/excel.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.svg')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/image.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('.txt')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/txt.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('/')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/folder.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('.mp4')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/mp4.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('.docx')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/docx.svg" type="image/svg+xml"></object>';
+      }
+      else if (file.endsWith('.pptx')) {
+        icon = '<object class="files-icon" data="./imagesB-READI/pptx.svg" type="image/svg+xml"></object>';
+      }
 
+      listItems += `<li data-file=./files/${output.files[counter]}><span>${item}</span>${icon}</li>`
+      counter++;
+    }
+
+    intellectualOutputsContainer.innerHTML +=
+      `
+    <button class="activitiesAccordion" id="intellectualOutput${output.id}"><b><u>Intellectual Output ${output.id}:</u></b> ${output.title}</button>
+    <div class="panel">
+      <ul id="intellectualOutput${output.id}Content">
+        ${listItems}
+      </ul>
+      <button class="download-all-btn" data-output-id="${output.id}">Download All</button>
+    </div>
+    `
+  }
+
+  const listItems = intellectualOutputsContainer.querySelectorAll('li');
+  listItems.forEach(listItem => {
+    const span = listItem.querySelector('span');
+    span.addEventListener('click', () => {
+      const file = listItem.dataset.file;
+
+      if (file.endsWith('/')) {
+        // The clicked item is a folder
+        // Make a request to the server to download the folder as a zip file
+        window.location.href = `/download-folder/${file}`;
+      }
+      else {
+        // The clicked item is a file
+        const fileName = file.split('/').pop();
+        fetch(file)
+          .then(response => response.blob())
+          .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          });
+      }
+    });
+  });
+
+  const downloadAllButtons = intellectualOutputsContainer.querySelectorAll('.download-all-btn');
+  downloadAllButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const outputId = btn.dataset.outputId;
+      window.location.href = `/download-all/${outputId}`;
+    });
+  });
+
+  var acc = document.getElementsByClassName("activitiesAccordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  //News with images rendering
   const newsWithImagesContainer = document.getElementById("newsWithImagesGroup")
   newsWithImagesContainer.innerHTML = ""
   for (let piece of newsWithImages) {
@@ -236,4 +320,3 @@ function renderDynamicObjects() {
 function render() {
   renderDynamicObjects()
 }
-

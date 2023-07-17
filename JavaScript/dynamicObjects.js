@@ -189,6 +189,65 @@ const partners = [
     }
 ]
 
+const intellectualOutputs = [
+    //NOTE: All used files here must be inside the "files" folder. There must be NO spaces in the filename.
+    //      If a file is a folder, its filename ("files" field) must end with '/'. Other files must end with their extension (ex: file.pdf).
+    //      zipName doesn't need to end with .zip
+    //id, title, items (text), files (filename), zipName
+    //EXAMPLE
+    /*
+    {
+        id: 1,
+        title: "Text to be displayed",
+        items: ["Text", "pdf", "png image", "excel file", "jpg image", "folder"], // This is what the user sees before downloading
+        files: ["example.txt", "sample.pdf", "sample.png", "sample.xlsx", "sample.jpg", "folderName/"], // This is the name of the file once downloaded
+        zipName: "zipName_1" //This is the name of the zip file that will be created if the Download All button is clicked. .zip extension will be added at the end.
+    }
+    */
+    {
+        id: 1,
+        title: "ANALYSIS OF EXISTING CURRICULA FOR EMERGENCY MANAGER PROFILE AND IDENTIFICATION OF KNOWLEDGE GAPS AND SKILLS MISMATCH",
+        items: ["Results", "Working Materials"],
+        files: ["IO1_Results/", "IO1_WorkingMaterials/"],
+        zipName: "IntellectualOutput_1"
+    },
+    {
+        id: 2,
+        title: "DESIGN OF ECEM AND EPM PROFILES",
+        items: ["B-READI_O2KICKOFF_UDG", "BREADI_Temp_V1", "ECEM-EPMCurriculumMappingtemplate"],
+        files: ["B-READI_O2KICKOFF_UDG.pptx", "BREADI_Temp_V1.docx", "ECEM-EPMCurriculumMappingtemplate.xlsx"],
+        zipName: "IntellectualOutput_2"
+    },
+    {
+        id: 3,
+        title: "DEVELOPMENT OF THE NEW MODULES FOR THE RENOVATION/INTRODUCTION OF THE DEGREES/TRACKS",
+        items: ["IO3 Final Report"],
+        files: ["IO3FinalReport_2revedimas.docx"],
+        zipName: "IntellectualOutput_3"
+    },
+    {
+        id: 4,
+        title: "TEACHER-TRAINING MODULE",
+        items: ["EDIMAS", "MDX", "TUB", "UDA", "UNIVAQ"],
+        files: ["EDIMAS/", "MDX/", "TUB/", "UDA/", "UNIVAQ/"],
+        zipName: "IntellectualOutput_4"
+    },
+    {
+        id: 5,
+        title: "EUROPEAN CERTIFICATION OF THE COMPETENCES OF ECEM AND EPM",
+        items: [],
+        files: [],
+        zipName: "zipName_1"
+    },
+    {
+        id: 6,
+        title: "PILOT EXPLOITATION OF INNOVATIVE LEARNING OUTCOME",
+        items: ["mp4Test"],
+        files: ["test.mp4"],
+        zipName: "zipName_1"
+    }
+]
+
 const newsWithImages = [
     //id, description
     //You could also add a title here if needed
@@ -288,3 +347,7 @@ const reports = [
         link: "link1",
     }*/
 ]
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { intellectualOutputs };
+}
