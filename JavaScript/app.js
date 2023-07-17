@@ -161,7 +161,7 @@ function renderDynamicObjects() {
       else if (file.endsWith('.mp4')) {
         icon = '<object class="files-icon" data="./imagesB-READI/mp4.svg" type="image/svg+xml"></object>';
       }
-      else if (file.endsWith('.docx')) {
+      else if (file.endsWith('.docx') || file.endsWith('.doc')) {
         icon = '<object class="files-icon" data="./imagesB-READI/docx.svg" type="image/svg+xml"></object>';
       }
       else if (file.endsWith('.pptx') || file.endsWith('.ppsx')) {
@@ -185,33 +185,24 @@ function renderDynamicObjects() {
   }
 
   const listItems = intellectualOutputsContainer.querySelectorAll('li');
-  listItems.forEach(listItem => {
-    const span = listItem.querySelector('span');
-    span.addEventListener('click', () => {
-      const file = listItem.dataset.file;
+listItems.forEach(listItem => {
+  const span = listItem.querySelector('span');
+  span.addEventListener('click', () => {
+    const file = listItem.dataset.file;
 
-      if (file.endsWith('/')) {
-        // The clicked item is a folder
-        // Make a request to the server to download the folder as a zip file
-        window.location.href = `/download-folder/${file}`;
-      }
-      else {
-        // The clicked item is a file
-        const fileName = file.split('/').pop();
-        fetch(file)
-          .then(response => response.blob())
-          .then(blob => {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          });
-      }
-    });
+    if (file.endsWith('/')) {
+      // The clicked item is a folder
+      // Open the folder in a new tab
+      window.open(file, '_blank');
+    }
+    else {
+      // The clicked item is a file
+      // Open the file in a new tab
+      window.open(file, '_blank');
+    }
   });
+});
+
 
   const downloadAllButtons = intellectualOutputsContainer.querySelectorAll('.download-all-btn');
   downloadAllButtons.forEach(btn => {
