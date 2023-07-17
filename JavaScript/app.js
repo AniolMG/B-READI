@@ -164,7 +164,7 @@ function renderDynamicObjects() {
       else if (file.endsWith('.docx')) {
         icon = '<object class="files-icon" data="./imagesB-READI/docx.svg" type="image/svg+xml"></object>';
       }
-      else if (file.endsWith('.pptx')) {
+      else if (file.endsWith('.pptx') || file.endsWith('.ppsx')) {
         icon = '<object class="files-icon" data="./imagesB-READI/pptx.svg" type="image/svg+xml"></object>';
       }
 
@@ -185,24 +185,33 @@ function renderDynamicObjects() {
   }
 
   const listItems = intellectualOutputsContainer.querySelectorAll('li');
-listItems.forEach(listItem => {
-  const span = listItem.querySelector('span');
-  span.addEventListener('click', () => {
-    const file = listItem.dataset.file;
+  listItems.forEach(listItem => {
+    const span = listItem.querySelector('span');
+    span.addEventListener('click', () => {
+      const file = listItem.dataset.file;
 
-    if (file.endsWith('/')) {
-      // The clicked item is a folder
-      // Open the folder in a new tab
-      window.open(file, '_blank');
-    }
-    else {
-      // The clicked item is a file
-      // Open the file in a new tab
-      window.open(file, '_blank');
-    }
+      if (file.endsWith('/')) {
+        // The clicked item is a folder
+        // Make a request to the server to download the folder as a zip file
+        window.location.href = `/download-folder/${file}`;
+      }
+      else {
+        // The clicked item is a file
+        const fileName = file.split('/').pop();
+        fetch(file)
+          .then(response => response.blob())
+          .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          });
+      }
+    });
   });
-});
-
 
   const downloadAllButtons = intellectualOutputsContainer.querySelectorAll('.download-all-btn');
   downloadAllButtons.forEach(btn => {
