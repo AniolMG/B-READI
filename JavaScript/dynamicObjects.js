@@ -28,7 +28,7 @@ const members = [
         descriptionES: "",
         descriptionCAT: "",
         link: "",
-        email: ""
+        email: "francesco.tarquini@univaq.it"
     },
     {
         id: 3,
@@ -80,7 +80,7 @@ const members = [
         descriptionES: "",
         descriptionCAT: "",
         link: "",
-        email: ""
+        email: "Rita.L.Carmo@azores.gov.pt"
     },
     {
         id: 7,
@@ -268,34 +268,54 @@ const newsWithImages = [
     //app.js should be modified accordingly if that's the case
     {
         id: 1,
-        title: "Title 1",
-        description: "News 1"
+        title: "Transnational Meeting. Universitat De Girona.",
+        description: "February 2023"
     },
     {
         id: 2,
-        title: "Title 2",
-        description: "News 2"
+        title: "Transnational Meeting. Universitat De Girona.",
+        description: "February 2023"
     },
     {
         id: 3,
-        title: "Title 3",
-        description: "News 3"
+        title: "Transnational Meeting. Universitat De Girona.",
+        description: "February 2023"
     },
     {
         id: 4,
-        title: "Title 4",
-        description: "News 4"
+        title: "Transnational Meeting. Universidade Dos Açores.",
+        description: "May 2023"
     },
     {
         id: 5,
-        title: "Title 5",
-        description: "News 5"
+        title: "Transnational Meeting. Universidade Dos Açores.",
+        description: "May 2023"
     },
     {
         id: 6,
-        title: "Title 6",
-        description: "News 6"
+        title: "Transnational Meeting. Universidade Dos Açores.",
+        description: "May 2023"
     },
+    {
+        id: 7,
+        title: "Transnational Meeting. Universidade Dos Açores.",
+        description: "May 2023"
+    },
+    {
+        id: 8,
+        title: "Training Week. Universita Degli Studi Della'Aquila.",
+        description: "June 2023"
+    },
+    {
+        id: 9,
+        title: "Training Week. Universita Degli Studi Della'Aquila.",
+        description: "June 2023"
+    },
+    {
+        id: 10,
+        title: "Training Week. Universita Degli Studi Della'Aquila.",
+        description: "June 2023"
+    }
 ]
 
 const conferences = [
