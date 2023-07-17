@@ -207,8 +207,8 @@ const intellectualOutputs = [
     {
         id: 1,
         title: "ANALYSIS OF EXISTING CURRICULA FOR EMERGENCY MANAGER PROFILE AND IDENTIFICATION OF KNOWLEDGE GAPS AND SKILLS MISMATCH",
-        items: ["Results", "Working Materials"],
-        files: ["IO1_Results/", "IO1_WorkingMaterials/"],
+        items: ["OUTPUT_ONE_B-READI_31_12_21", "QUESTIONNAIRE_BREADi_version_for_meeting 30_03_21_"],
+        files: ["OUTPUT_ONE_B-READI_31_12_21.pdf", "QUESTIONNAIRE_BREADi_version_for_meeting_30_03_21_.pdf"],
         zipName: "IntellectualOutput_1"
     },
     {
@@ -228,8 +228,22 @@ const intellectualOutputs = [
     {
         id: 4,
         title: "TEACHER-TRAINING MODULE",
-        items: ["EDIMAS", "MDX", "TUB", "UDA", "UNIVAQ"],
-        files: ["EDIMAS/", "MDX/", "TUB/", "UDA/", "UNIVAQ/"],
+        items: ["Mode choice analysis", "Transport in Disaster v3",
+            "PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023-RCarmo",
+            "BERNI_PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023", "BERNI_Breadi_27giugno2023-video",
+            "NATIONAL_CIVIL_PROTECTION_SISTEM_PILOT_BREADI_COLCERASA_27_06_23_EN_FINAL",
+            "B_READI_AQ_2023_Antonelli", "presentazione_PILOT_BREADI_L_AQUILA_minaudo_2023_def",
+            "TEMPLATE_PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023", "ENTRY_TEST-PILOT-BREADI",
+            "B-Readi_S_Hara_copy", "Digital_Evidence", "L_Aquila", "MDX_ANALYTICS_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023",
+            "B-Readi_L_Aquila"],
+        files: ["Mode_choice_analysis.pdf", "Transport_in_Disaster_v3.pdf",
+            "PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023-RCarmo.ppsx",
+            "BERNI_PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023.pptx", "BERNI_Breadi_27giugno2023-video.mp4",
+            "NATIONAL_CIVIL_PROTECTION_SISTEM_PILOT_BREADI_COLCERASA_27_06_23_EN_FINAL.pptx",
+            "B_READI_AQ_2023_Antonelli.pptx", "presentazione_PILOT_BREADI_L_AQUILA_minaudo_2023_def.pptx",
+            "TEMPLATE_PILOT_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023.pdf", "ENTRY_TEST-PILOT-BREADI.doc",
+            "B-Readi_S_Hara_copy.pptx", "Digital_Evidence.pptx", "L_Aquila.pdf", "MDX_ANALYTICS_BREADI_L_AQUILA_ITALY_26_30_JUNE_2023.pptx",
+            "B-Readi_L_Aquila.pptx"],
         zipName: "IntellectualOutput_4"
     },
     {
@@ -237,14 +251,14 @@ const intellectualOutputs = [
         title: "EUROPEAN CERTIFICATION OF THE COMPETENCES OF ECEM AND EPM",
         items: [],
         files: [],
-        zipName: "zipName_1"
+        zipName: "IntellectualOutput_5"
     },
     {
         id: 6,
         title: "PILOT EXPLOITATION OF INNOVATIVE LEARNING OUTCOME",
         items: [],
         files: [],
-        zipName: "zipName_1"
+        zipName: "IntellectualOutput_6"
     }
 ]
 
