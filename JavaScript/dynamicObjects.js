@@ -214,8 +214,8 @@ const intellectualOutputs = [
     {
         id: 2,
         title: "DESIGN OF ECEM AND EPM PROFILES",
-        items: ["B-READI_O2KICKOFF_UDG", "BREADI_Temp_V1", "ECEM-EPMCurriculumMappingtemplate"],
-        files: ["B-READI_O2KICKOFF_UDG.pptx", "BREADI_Temp_V1.docx", "ECEM-EPMCurriculumMappingtemplate.xlsx"],
+        items: ["BREADI_Temp_V1", "ECEM-EPMCurriculumMappingtemplate"],
+        files: ["BREADI_Temp_V1.docx", "ECEM-EPMCurriculumMappingtemplate.xlsx"],
         zipName: "IntellectualOutput_2"
     },
     {
@@ -256,8 +256,8 @@ const intellectualOutputs = [
     {
         id: 6,
         title: "PILOT EXPLOITATION OF INNOVATIVE LEARNING OUTCOME",
-        items: [],
-        files: [],
+        items: ["Teaching Training and Pilot B-Readi"],
+        files: ["Teaching_Training_and_Pilot_B-Readi.docx"],
         zipName: "IntellectualOutput_6"
     }
 ]
