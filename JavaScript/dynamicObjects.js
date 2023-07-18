@@ -123,8 +123,8 @@ const members = [
     },
     {
         id: 10,
-        nameEN: "Simon",
-        nameES: "Simon",
+        nameEN: "Simon McCarthy",
+        nameES: "Simon McCarthy",
         briefEN: "Middlesex University",
         briefES: "Middlesex University",
         briefCAT: "Middlesex University",
@@ -132,7 +132,7 @@ const members = [
         descriptionES: "",
         descriptionCAT: "",
         link: "",
-        email: ""
+        email: "S.Mccarthy@mdx.ac.uk"
     },
     {
         id: 11,
@@ -221,8 +221,8 @@ const intellectualOutputs = [
     {
         id: 3,
         title: "DEVELOPMENT OF THE NEW MODULES FOR THE RENOVATION/INTRODUCTION OF THE DEGREES/TRACKS",
-        items: ["IO3 Final Report"],
-        files: ["IO3FinalReport_2revedimas.docx"],
+        items: ["IO3 Final Report", "IO3 B-READI MODULES"],
+        files: ["IO3_Final_Report_Final_version_13July2023.pdf", "IO3_B-READI_MODULES.pdf"],
         zipName: "IntellectualOutput_3"
     },
     {
