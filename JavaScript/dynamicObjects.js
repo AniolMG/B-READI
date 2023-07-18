@@ -256,8 +256,8 @@ const intellectualOutputs = [
     {
         id: 6,
         title: "PILOT EXPLOITATION OF INNOVATIVE LEARNING OUTCOME",
-        items: ["Teaching Training and Pilot B-Readi"],
-        files: ["Teaching_Training_and_Pilot_B-Readi.docx"],
+        items: ["BREADI_PILOT_L'AQUILA_26-30_JUNE_23_AZZORRE"],
+        files: ["BREADI_PILOT_L'AQUILA_26-30_JUNE_23_AZZORRE.docx"],
         zipName: "IntellectualOutput_6"
     }
 ]
