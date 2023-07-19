@@ -205,7 +205,7 @@ h3 {
 }
 
 .activities-content {
-    width: 80%;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -323,7 +323,7 @@ h3 {
 
 .newsImage {
     height: auto;
-    width: 500px;
+    width: 100%;
 }
 
 .partner-country {
