@@ -1,505 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv='cache-control' content='no-cache'>
-  <meta http-equiv='expires' content='0'>
-  <meta http-equiv='pragma' content='no-cache'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="./imagesB-READI/bready_logo_small_removebg_upscaled.png">
-  <script src="https://kit.fontawesome.com/b99e53c9e9.js" crossorigin="anonymous"></script>
-  <title>B-READI</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/simbol.svg">
+    <script src="https://kit.fontawesome.com/b99e53c9e9.js" crossorigin="anonymous"></script>
+    <title>Reusemp3</title>
 </head>
-
 <body onload="render()">
-  <header>
-    <nav id="navBar" class="navbar navbar-light navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand ">
-          <img id="navLogo" src="./imagesB-READI/bready_logo_small_removebg_upscaled.png" alt="Logo" height=70>
-          <img id="navLogo" src="./imagesB-READI/eu.png" alt="Logo" height=70>
-        </a>
-        <a href="https://www.facebook.com/people/Project-B-Readi/100090163643753/">
-          <img src="./imagesB-READI/facebook.png" class="facebook" alt="facebook logo" width="65"></a>
-        <button class="navbar-toggler" type="button" id="offcanvasButton" data-bs-target="#offcanvasRight"
-          aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul id="navLinks" class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle lang" key="project" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Project
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item lang" key="overview" href="#container">Overview</a></li>
-                <li><a class="dropdown-item lang" key="generalInfo" href="#staticBackdropLabel">General Information</a>
-                </li>
-                <li><a class="dropdown-item lang" key="h3Scope" href="#scope">Scope</a></li>
-                <li><a class="dropdown-item lang" key="h3IntellectualOutputs" href="#intellectualOutputs">Intellectual
-                    Outputs</a></li>
-                <li><a class="dropdown-item lang" key="activities-content" href="#activities">Other Activities</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle lang" key="supporters" id="navbarDropdownMenuLink3" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Collaborators
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                <li><a class="dropdown-item lang" key="partnersGroup" href="#partners">Partners</a></li>
-                <li><a class="dropdown-item lang" key="members" href="#membersContainer">Members</a></li>
-                <li><a class="dropdown-item lang" key="h3teamEdimas" href="#teamEdimas">BREADI project team
-                    of E.Di.Ma.S.</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle lang" key="publis&news" id="navbarDropdownMenuLink2" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">News & Reports
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                <li><a class="dropdown-item lang" key="newsWithImagesGroup" href="#newsWithImagesContainer">News</a>
-                </li>
-                <li><a class="dropdown-item lang" key="reports" href="#reportsContainer">Reports</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link lang" key="relatedProjects" href="#projectsContainer">Related Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel" class="lang" key="menu">MENU</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="overview" href="#container">Overview</a>
-          </li>
-          <li><a class="nav-link canvas-links lang" key="generalInfo" href="#staticBackdropLabel">General
-              Information</a>
-          </li>
-          <li><a class="nav-link canvas-links lang" key="h3Scope" href="#scope">Scope</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="partnersGroup" href="#partners">Partners</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="h3IntellectualOutputs" href="#intellectualOutputs">Intellectual
-              Outputs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="activities-content" href="#activities">Other Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="newsWithImagesGroup" href="#newsWithImagesContainer">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="members" href="#membersContainer">Members</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="reports" href="#reportsContainer">Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link canvas-links lang" key="relatedProjects" href="#projectsContainer">Related
-              projects</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="info">
-      <img id="simbol" src="./imagesB-READI/bready_logo_small_removebg_upscaled.png" alt="Logo">
-      <h2 id="welcomeInfo" class="lang" key="subtitle">Project B-READI stands for Building Reliable Effective and Aware
-        DIsaster emergency and prevention managing skills.</h2>
-    </div>
-    <svg onclick="scrollDown()" id="scrollDown" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white"
-      class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
-      <path
-        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-    </svg>
-  </header>
-  <section id="container">
-    <svg id="btn-back-to-top" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#3267b2"
-      class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-      <path
-        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-    </svg>
-    <section class="sectionContainer">
-      <h3 class="lang" key="h3ProjectOverview">PROJECT OVERVIEW</h3>
-      <div class="content">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10000">
-          <div class="carousel-inner">
-            <div id="firstImageContainer" class="carousel-item active">
-              <img id="firstImage" src="./imagesB-READI/bready_logo_small_removebg_upscaled.png" class="d-block"
-                alt="...">
+    <header>
+        <nav id="navBar" class="navbar navbar-light navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand ">
+                    <img id="navLogo" src="./images/logoHorizontal.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" id="offcanvasButton" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul id="navLinks" class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle lang" key="project"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Project
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item lang" key="overview" href="#container">Overview</a></li>
+                            <li><a class="dropdown-item lang" key="packages" href="#workPackages">Work packages</a></li>
+                            <li><a class="dropdown-item lang" key="field" href="#fieldSites">Field sites</a></li>
+                            <li><a class="dropdown-item lang" key="mesocosm" href="#mesocosmStudies">Mesocosm studies</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link lang" key="members"  href="#membersContainer">Members</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle lang" key="publis&news"  id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Publications & News
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item lang" key="news" href="#newsContainer">News</a></li>
+                            <li><a class="dropdown-item lang" key="conferences" href="#conferencesContainer">Conferences</a></li>
+                            <li><a class="dropdown-item lang" key="publications" href="#publicationsContainer">Publications</a></li>
+                            <li><a class="dropdown-item lang" key="jobOffers" href="#jobContainer">Job offers</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle lang" key="supporters"  id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Supporters
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                            <li><a class="dropdown-item lang" key="relatedProjects" href="#projectsContainer">Related projects</a></li>
+                            <li><a class="dropdown-item lang" key="advisoryBoard" href="#advisoryContainer">Advisory board</a></li>
+                            <li><a class="dropdown-item lang" key="authorites" href="#authoritiesContainer">Authorities & utilities</a></li>
+                            <li><a class="dropdown-item lang" key="universities" href="#universitiesContainer">Universities</a></li>
+                            <li><a class="dropdown-item lang" key="techCompanies" href="#techCompaniesContainer">Tech. companies</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img id="actualLanguage" src="images/en.svg" width="16" height="11" loading="lazy">      
+                          </a>
+                          <ul class="dropdown-menu" id="language-menu" aria-labelledby="navbarDropdownMenuLink4">
+                            <li><a class='dropdown-item translate' id='en'><img src="images/en.svg" width="22" height="15" loading="lazy"></a></li>
+                            <li><a class='dropdown-item translate' id='es'><img src="images/es.svg" width="22" height="15" loading="lazy"></a></li>
+                            <li><a class='dropdown-item translate' id='cat'><img src="images/cat.svg" width="22" height="15" loading="lazy"></a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+        </nav>
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel" class="lang" key="menu">MENU</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="carousel-item">
-              <img src="./imagesB-READI/eu.png" class="d-block w-100" alt="...">
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item" id="languageContainer">
+                  <img class="translate" id="en" src="images/en.svg" width="22" height="15" loading="lazy">
+                  <img class="translate" id="es" style="margin:0px 10px 0px 10px" src="images/es.svg" width="22" height="15" loading="lazy">    
+                  <img class="translate" id="cat" src="images/cat.svg" width="22" height="15" loading="lazy">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link canvas-links lang" key="overview" href="#container">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link canvas-links lang" key="packages" href="#workPackages">Work packages</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="field" href="#fieldSites">Field sites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link canvas-links lang" key="mesocosm" href="#mesocosmStudies">Mesocosm studies</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link canvas-links lang" key="members" href="#membersContainer">Members</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="news"  href="#newsContainer">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="conferences" href="#conferencesContainer">Conferences</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="publications"  href="#publicationsContainer">Publications</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="jobOffers"  href="#jobContainer">Job offers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="relatedProjects"  href="#projectsContainer">Related projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="advisoryBoard" href="#advisoryContainer">Advisory board</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="authorities" href="#authoritiesContainer">Authorities & utilities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="universities"  href="#universitiesContainer">Universities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link canvas-links lang" key="techCompanies" href="#techCompaniesContainer">Tech. companies</a>
+                </li>
+              </ul>
             </div>
-          </div>
         </div>
-        <p style="flex:1;margin: 0; font-size: 1.05rem;">
-          <span class="lang" key="text1span1">Communities and public and private companies need new and modern ways to
-            design integrated emergency plans not only to manage the consequences of a disaster, but also and above all
-            to design in peacetime, strategic and integrated planning, to ensure in the event of a crisis, that
-            communities resume socio-economic and productive activities promptly. This requires the creation of a
-            network of interconnected and interdisciplinary skills and competencies in advance of a disaster, to provide
-            rapid responses and to better manage the complexities of the recovery process. The reliability and
-            effectiveness of such an approach requires managerial governance capabilities. In recent years, due to the
-            increase in crises, the profile of an Emergency Manager has been developed, and some types of certifications
-            are offered nationally and internationally, but are not linked to a university curriculum. Often, holders
-            of such certifications start working as police officers, detectives, firefighters, security technicians,
-            police dispatchers, paramedics and others who have gained considerable experience in civil
-            protection.</span>
-        </p>
-      </div>
-      <div class="content">
-        <p style="flex:1;margin: 0; font-size: 1.05rem;">
-          <span class="lang" key="text2span1">Extensive work experience is a prerequisite for an Emergency Manager, but
-            today's complex economic, social and environmental scenario requires a strong mix of managerial knowledge
-            and skills with critical thinking, decision-making, interpersonal and leadership that can only be developed
-            within master's degrees related to law enforcement, public administration, business administration,
-            engineering and medicine.</span><br><br>
-          <span class="lang" key="text2span2">Moreover, since disasters can take many forms, national and local
-            governments
-            and organisations need to be prepared for any emergency that may occur, i.e. they need to be aware of all
-            possible risks, be able to imagine the worst case scenario and have the capacity to draw up a strategic and
-            integrated plan on how to deal with it. This means that additional competences and skills need to be
-            developed
-            to provide the existing EM profiles with enhanced and additional knowledge, skills and
-            abilities.</span>
-          <span class="lang" key="text2span3">In these tragic days when the Corona-virus started to spread around the
-            world,
-            and early action was crucial, two main points were evident:</span><br><br>
-          <span class="liRoman" key="text2span4">in each country, the government adopts its own policy without
-            coordinating
-            with others, and each national
-            civil protection service uses different approaches, methods and tools preventing a common strategy, even
-            when national borders are not an obstacle to the spread of the danger.</span>
-          <span class="liRoman" key="text2span5">For these reasons, many experts, starting with E.Di.Ma.S., have
-            advocated
-            the need to create the profile
-            of a European professional for crisis management. Moreover, in this context it emerged that volunteers have
-            proved to be an indispensable resource for assisting populations in many areas.</span>
-          <br>
-          <span class="lang" key="text2span6">For these reasons many experts have claimed the need to create the profile
-            of a European Professional for the crisis management. Furthermore, the volunteers have been proved to be the
-            backbone of the substantial assistance to the population from any field.</span>
-        </p>
-      </div>
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title lang" key="generalInfo" id="staticBackdropLabel"
-              style="color: #3267b2; font-weight: bold;">General Information</h5>
-          </div>
-          <div class="modal-body">
-            <p style="text-align: justify;">
-              <b class="lang" key="fundingAgency">FUNDING AGENCY:</b> <span class="lang" key="fundingInfo"> Erasmus+
-                Programme of the European Union, Code: 2019-1-IT02-KA-20203-079807</span><br><br>
-              <b class="lang" key="duration">DURATION:</b> 2020-2023<br><br>
-              <b class="lang" key="coordinator">COORDINATOR:</b> Anna Tozzi (Universita Degli Studi
-              Della'Aquila)<br><br>
-              <b class="lang" key="generalInfoUniversities">UNIVERSITIES & ORGANISATIONS:</b> Universita Degli Studi
-              Della'Aquila, Emergency and Disaster Management Studies, Universitat De Girona, Universidade Dos Açores,
-              Middlesex University, Technische Universitat Berlin
-              <br><br>
-              <b class="lang" key="budget">BUDGET:</b> 415.125 €
+        <div id="info">
+            <img id="simbol" src="./images/whiteLogo.png" alt="Logo">
+            <h2 id="welcomeInfo" class="lang" key="subtitle">Integrating nature-based water Reuse
+                strategies with advanced Monitoring
+                of the Presence and impact of
+                MicroPollutants and MicroPlastics.</h2>
+        </div>
+        <svg onclick="scrollDown()" id="scrollDown" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+        </svg>
+    </header>
+    <section id="container">
+        <svg id="btn-back-to-top" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#3267b2" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+        </svg>
+        <section class="sectionContainer">
+            <h3 class="lang" key="h3ProjectOverview">PROJECT OVERVIEW</h3>
+            <div class="content">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10000">
+                    <div class="carousel-inner">
+                      <div id="firstImageContainer" class="carousel-item active">
+                        <img id="firstImage" src="./images/logo.svg" class="d-block" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/bckgndImage.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                </div>
+                <p style="flex:1;margin: 0; font-size: 1.05rem;">
+                  <span class="lang" key="text1span1">The aim of the ReUseMP3 project is to explore the feasibility of using </span><b class="lang" key="text1b1">nature-based solutions </b><span class="lang" key="text1span2">(NBS) with direct reuse purposes- including</span><b class="lang" key="text1b2"> irrigation</b> <span class="lang" key="text1span3">of crops for food production in cities in a more sustainable way.</span><br>
+                  <span class="lang" key="text1span4">A range of</span> <b class="lang" key="text1b3">analytical methodologies</b><span class="lang" key="text1span5"> including target analysis of known</span> <b class="lang" key="text1b4">emerging pollutants</b> <span class="lang" key="text1span6">but also a wide-scope suspect and non-target analysis are applied to provide a better overview of the presence and removal of substances of emerging concern along the water reuse cycle as well as their</span> <b class="lang" key="text1b5">impact to the environment and human health</b>.<br><br> 
+                  <b class="lang" key="text1b6">Microplastics</b> <span class="lang" key="text1span7">and their additives are also monitored in these studies, which include</span> <b class="lang" key="text1b7">lab-scale experiments</b> <span class="lang" key="text1span8"> under controlled conditions with real grey/wastewater, as well as</span> <b class="lang" key="text1b8">field studies</b>.<br> 
+                  <span class="lang" key="text1span9">All the data collected during the project will also allow the development of innovative</span> <b class="lang" key="text1b9">decision support tools for water management</b>. 
+                </p>
+            </div>
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title lang" key="generalInfo" id="staticBackdropLabel" style="color: #3267b2; font-weight: bold;">General Information</h5>
+                </div>
+                <div class="modal-body">
+                  <p style="text-align: justify;">
+                    <b class="lang" key="fundingAgency">FUNDING AGENCY:</b> <span class="lang" key="fundingInfo"> Spanish State Research Agency (AEI), Code: PID2020-115456RB-I00</span><br><br>
+                    <b class="lang" key="duration">DURATION:</b> 2021-2024<br><br>
+                    <b class="lang" key="coordinator">COORDINATOR:</b> Institut Català de Recerca de l'Aigua (ICRA)<br><br>
+                    <b class="lang" key="leadResearchers">LEAD RESEARCHERS:</b> Dr. Gianluigi Buttiglieri & Dra. Sara Rodriguez-Mozaz<br><br>
+                    <b class="lang" key="otherResearchers">OTHER RESEARCHERS:</b> Dr. Joaquim Comas Matas, Dr. Eusebi Calle Ortega (UdG), Diana Alvarez-Muñoz<br><br>
+                    <b class="lang" key="budget">BUDGET:</b> 144.000 €
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <a class="lang" key="linkInfoProjecte" href="https://www.icra.cat/projects/reusemp3-integrating-nature-based-water/197" target="_blank">Project information</a>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="sectionContainer" id="workPackages">
+          <h3 class="lang" key="h3WorkPackages">WORK PACKAGES</h3>
+          <div class="column-content">
+            <img src="./images/workpackages.png" class="d-block w-100" alt="...">
+            <p style="margin: 0; margin-top: 30px ;font-size: 1.05rem;">
+              <b>WP1:</b> <span class="lang" key="wp1">Hydroponic greywater treatment and reuse system for crops production under controlled conditions</span><br> 
+              <b>WP2:</b> <span class="lang" key="wp2">Field case studies of reclaimed water irrigation for crops production and/or NBS applications</span><br>
+              <b>WP3:</b> <span class="lang" key="wp3">Advanced analytical tools to monitor water treatment technologies and irrigation systems</span><br>
+              <b>WP4:</b> <span class="lang" key="wp4">Environmental Risk Assessment (ERA)</span><br>
+              <b>WP5:</b> <span class="lang" key="wp5">Human Risk Assessment derived from crop production</span><br>
+              <b>WP6:</b> <span class="lang" key="wp6">ReuseMP3 decision support tool</span><br>
             </p>
           </div>
-          <div class="modal-footer">
-            <a class="lang" key="linkInfoProjecte" href="#container">Project
-              overview</a>
+        </section>
+        <section class="sectionContainer" id="fieldSites">
+          <h3 class="lang" key="h3FieldSites">FIELD SITES</h3>
+          <div class="column-content" id="fieldContent" style="margin-top: 30px;">
+            <img id="fieldSitesImage" src="./images/fieldSites.png" class="d-block" alt="...">
+            <p style="margin: 0; margin-top: 30px ;font-size: 1.05rem;">
+              <b>Tossa de Mar:</b><span class="lang" key="field1"> Municipal gardens irrigated with treated urban wastewater (tertiary treatment)</span> <br>
+              <b>Colera:</b><span class="lang" key="field2"> Vineyards irrigated with treated urban wastewater (tertiary treatment)</span> <br>
+              <b>Lloret de Mar:</b><span class="lang" key="field3"> Ornamental an edible-plants irrigated with NBS based treated greywater (hydroponic wetland)</span> <br>
+              <b>Girona:</b><span class="lang" key="field4"> Urban garden irrigated with NBS based treated greywater (wetwall)</span> <br>
+              <b class="lang" key="lesbos">Lesbos (Greece):</b><span class="lang" key="field5"> Herbs irrigated with NBS based treated urban wastewater (UASB-wetland)</span> <br>
+            </p>
+          </div>
+        </section>
+        <section class="sectionContainer" id="mesocosmStudies">
+          <h3 class="lang" key="h3Mesocosm">MESOCOSM STUDIES</h3>
+          <div class="column-content" id="mesocosmContent" style="margin-top: 30px;">
+            <img id="mesocosmImage" src="./images/mesocosm.JPG" class="d-block" alt="...">
+            <p style="flex:1;margin: 0; margin-top: 20px; font-size: 1.05rem;" class="lang" key="mesocosmText">
+              The hydroponic pilot plant was built in the ICRA PLANTEA platform to test edible plant synthetic and/or real greywater treatment and crop production. 
+              It is made up of several lines that can work in parallel, with distinct influent water, and sensors for temperature, humidity, and light intensity.
+              The canals can be filled in with light expanded clay aggregates (LECA) as inert substratum and can host up to 8 plants per canal. The presence of air bubbling inside the canals is obtained by introducing air dissipators in the water phase, if needed.
+            </p>
+          </div>
+        </section>
+        <section class="sectionContainer" id="membersContainer">
+            <h3 class="lang" key="h3Members">MEMBERS</h3>
+            <div class="container">
+                <div class="gridLayout" id="memberGroup">
+                  
+                </div>
+            </div>
+        </section>
+        <section class="sectionContainer" id="newsContainer">
+          <h3 class="lang" key="h3News">NEWS</h3>
+          <div class="container" id="news">
+
+          </div>
+        </section>
+        <section class="sectionContainer" id="conferencesContainer">
+          
+        </section>
+        <section class="sectionContainer" id="publicationsContainer">
+          
+        </section>
+        <section class="sectionContainer" id="jobContainer">
+          
+        </section>
+        <section class="sectionContainer" id="projectsContainer">
+          
+
+        </section>
+        <section class="sectionContainer" id="advisoryContainer">
+          <h3 class="lang" key="h3Advisory">ADVISORY BOARD</h3>
+          <div class="container" id="advisoryBoard">
+      
+          </div>
+        </section>
+        <section class="sectionContainer" id="authoritiesContainer">
+          <h3 class="lang" key="h3Authorities">AUTHORITIES & UTILITIES</h3>
+          <div class="container">
+              <div class="gridLayout" id="authoritiesGroup">
+                
+              </div>
+            </div>
+        </section>
+        <section class="sectionContainer" id="universitiesContainer">
+          <h3 class="lang" key="h3Universities">UNIVERSITIES</h3>
+          <div class="container">
+              <div class="gridLayout" id="universitiesGroup">
+                
+              </div>
+            </div>
+        </section>
+        <section class="sectionContainer" id="techCompaniesContainer">
+          <h3 class="lang" key="h3techCompanies">TECH. COMPANIES & OTHERS</h3>
+          <div class="container">
+              <div class="gridLayout" id="companiesGroup">
+                
+              </div>
+              <div class="gridLayout" id="othersGroup">
+                
+              </div>
+            </div>
+        </section>
+    </section>
+    <footer id="site-footer">
+      <div class="container">
+        <div class="row">
+          <div id="aboutFooter" class="col-sm-12 col-md-6">
+            <h6 class="lang" key="about">About</h6>
+            <hr>
+            <p class="text-justify lang" key="aboutText">The aim of the ReUseMP3 project is to explore the feasibility of using nature-based solutions (NBS) with direct reuse purposes- including irrigation of crops for food production in cities in a more sustainable way.
+              A range of analytical methodologies including target analysis of known emerging pollutants but also a wide-scope suspect and non-target analysis are applied to provide a better overview of the presence and removal of substances of emerging concern along the water reuse cycle as well as their impact to the environment and human health. 
+            </p>
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+            <h6 class="lang" key="quickLinks">Quick Links</h6>
+            <hr>
+            <div style="display: flex; justify-content: space-between;">
+              <ul class="footer-links">
+                <li><a class="lang" key="overview" href="#container">Overview</a></li>
+                <li><a class="lang" key="packages" href="#workPackages">Work packages</a></li>
+                <li><a class="lang" key="field" href="#fieldSites">Field sites</a></li>
+                <li><a class="lang" key="mesocosm" href="#mesocosmStudies">Mesocosm studies</a></li>
+                <li><a class="lang" key="members" href="#membersContainer">Members</a></li>
+                <li><a class="lang" key="news" href="#newsContainer">News</a></li>
+                <li><a class="lang" key="conferences" href="#conferencesContainer">Conferences</a></li>
+              </ul>
+              <ul class="footer-links">
+                <li><a class="lang" key="publications" href="#publicationsContainer">Publications</a></li>
+                <li><a class="lang" key="jobOffers" href="#jobContainer">Job offers</a></li>
+                <li><a class="lang" key="relatedProjects" href="#projectsContainer">Related Projects blablabalbalbalblabla</a></li>
+                <li><a class="lang" key="advisoryBoard" href="#advisoryContainer">Advisory board</a></li>
+                <li><a class="lang" key="authorities" href="#authoritiesContainer">Authorities</a></li>
+                <li><a class="lang" key="universities" href="#universitiesContainer">Universities</a></li>
+                <li><a class="lang" key="techCompanies" href="#techCompaniesContainer">Tech.companies</a></li>
+              </ul>
+            </div>  
           </div>
         </div>
-      </div>
-    </section>
-    <section class="sectionContainer" id="scope">
-      <h3 class="lang" key="h3Scope">SCOPE</h3>
-      <div class="content">
-        <div class="basicRowFormat">
-          <p style="flex:1;margin: 0; font-size: 1.05rem;">
-            <span class="lang" key="text3span1">The project intends to contribute to addressing the problems mentioned
-              above by achieving two main objectives:</span><br><br>
-            <span class="liRoman" key="text3span2">designing multidisciplinary curricula for the creation of two
-              professional profiles with European value: 1) European Crisis Emergency Manager (ECEM); 2) European
-              Prevention Manager (EPM);</span>
-            <span class="liRoman" key="text3span3">and to provide teachers with the competences and skills to design and
-              implement a multidisciplinary modular curriculum offering a high degree of flexibility in the definition
-              of
-              the curriculum</span>
-            <br>
-          </p>
-          <p style="flex:1;margin: 0; font-size: 1.05rem;">
-            <span class="lang" key="text3span4">The main activities will be:</span><br><br>
-            <span class="liDecimal" key="text3span5">identify existing profiles and curricula for the preparation of the
-              emergency manager and analyse knowledge gaps and skills mismatches;</span>
-            <span class="liDecimal" key="text3span6">design multidisciplinary curricula for the creation of the two
-              professionals ECEM and EPM;</span>
-            <span class="liDecimal" key="text3span7">create new degrees or new tracks in the curricula that best fit the
-              ECEM and EPM profiles envisaged;</span>
-            <span class="liDecimal" key="text3span8">designing modules to be integrated into the
-              Health/Engineering/Management curricula to provide students in these degrees with the knowledge and skills
-              needed to perform community service in a competent and appropriate manner, including as volunteers, and to
-              enhance their active citizenship and civic engagement;</span>
-            <span class="liDecimal" key="text3span9">implement new modules/pathways providing such knowledge and skills
-              and organise work experience;</span>
-            <span class="liDecimal" key="text3span10">to finalise the process for the academic certification of these
-              competences.</span>
-          </p>
-        </div>
-
-      </div>
-    </section>
-    <section class="sectionContainer" id="partners">
-      <h3 class="lang" key="h3Partners">PARTNERS</h3>
-      <div class="content">
-        <p style="flex:1;margin: 0; font-size: 1.05rem;">
-          <span class="lang" key="text4span1">A total of 5 Universities and 1 organisation form the B-READI consortium.
-            All 6 partners demonstrated high enthusiasm on the idea that they could collaborate in this project. There
-            is a wide range of disciplines involved in the consortium. All participating institutions have extensive
-            experience using online platforms and remote communication, collaboration and coordination practices. All
-            participating institutions are capable of using the digital platforms for the delivery of the project's
-            outputs.</span><br><br>
-          <span class="lang" key="text4span2">The consortium consists of the following partners:</span>
-        </p>
+        <hr>
       </div>
       <div class="container">
-        <div class="gridLayout" id="partnersGroup">
-
-        </div>
-      </div>
-    </section>
-    <section class="sectionContainer" id="intellectualOutputs">
-      <h3 class="lang" key="h3IntellectualOutputs">INTELLECTUAL OUTPUTS</h3>
-      <div class="activities-content" id="intellectualOutputsGroup">
-
-      </div>
-    </section>
-    <section class="sectionContainer" id="activities">
-      <h3 class="lang" key="h3Activities">OTHER ACTIVITIES</h3>
-      <div class="activities-content">
-        <p style="flex:1;margin: 0; font-size: 1.05rem;">
-          <span class="lang" key="text5span1">Each partner will be required to support the following
-            activities:</span><br><br>
-        </p>
-        <button class="activitiesAccordion">Transnational Projects Meeting</button>
-        <div class="panel">
-          <ul id="transnational-projects-meeting">
-            <li>04-2023 Spain</li>
-            <li>05-2023 Portugal</li>
-            <li>06-2023 Italy</li>
-          </ul>
-        </div>
-        <button class="activitiesAccordion">Multiplier Event</button>
-        <div class="panel" style="width:46.88vw">
-          <ul>
-            <li>Multiplier Event - Spain </li>
-            <li>Multiplier Event - Portugal</li>
-            <li>Multiplier Event - UK</li>
-            <li>Multiplier Event - Italy</li>
-            <li>Multiplier Event - Germany</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="sectionContainer" id="newsWithImagesContainer">
-      <h3 class="lang" key="h3NewsWithImages">NEWS</h3>
-      <div class="container">
-        <div class="gridLayout" id="newsWithImagesGroup">
-
-        </div>
-      </div>
-    </section>
-    <section class="sectionContainer" id="membersContainer">
-      <h3 class="lang" key="h3Members">MEMBERS</h3>
-      <div class="container">
-        <div class="gridLayout" id="memberGroup">
-
-        </div>
-      </div>
-    </section>
-    <section class="sectionContainer" id="teamEdimas">
-      <h3 class="lang" key="h3teamEdimas">BREADI project team of E.Di.Ma.S.</h3>
-      <div class="container">
-        <table id="tableTeamEdimas">
-          <tbody>
-            <tr>
-              <td><br>Giuseppe Coduto</td>
-              <td><br>Doctor of Management andSocio-Economic Development - Senior official department of civil
-                protection - Presidency of the council of ministers - Adjunct Professor of strategic spatialplanning and
-                Emergency Management - Founder and Past-President of theE.Di.Ma.S.&nbsp;</td>
-            </tr>
-            <tr>
-              <td><br>Patrizia Ferrazzo</td>
-              <td><br>Project manager - OrdinaryMember and Treasurer of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Giulio Marcucci</td>
-              <td><br>President of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Fabrizio Colcerasa</td>
-              <td><br>Consultant - Deputy Head of theCivil Protection Department - Presidency of the Council of
-                Ministers - formerDirector of Emergencies National Corps of Italian Fire Brigades - Chairman ofthe
-                Technical Scientific Committee of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Patrizia Cologgi</td>
-              <td><br>Consultant - ex DG of the Civil Protection Department - Presidency of the Council of Ministers -
-                Founder of the E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Paolo Pulicani</td>
-              <td><br>Software Engineer andenvironmental expert - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Enrico Colaiacovo</td>
-              <td><br>Communications Engineer - Director of technological innovations - Istituto Poligrafico e Zecca
-                delloStato - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Alessia Filippone</td>
-              <td><br>Geologist - Senior official atthe Ministry of the Environment - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Ernesto Consiglio</td>
-              <td><br>Geologist - Director of OVERITSpA - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Sergio Contessa</td>
-              <td><br>Lawyer - Legislative Office ofthe Presidency of the Council of Ministers - Ordinary Member
-                andSecretary-General of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Giorgio Coppola</td>
-              <td><br>Geologist - Official of theCentral Italy Earthquake Reconstruction Office - Ordinary Member
-                of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Marco Colcerasa</td>
-              <td><br>Architect - Contract Professorof Safety in the Workplace and Fire Prevention - Ordinary Member
-                of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Massimo Stroppa</td>
-              <td><br>Official of the GovernmentOffice - Prefecture of Milan. Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Matteo Medori</td>
-              <td><br>Electronics Engineer - Technical Officer - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Mauro Palombella</td>
-              <td><br>Geologist senior - TechnicalConsultant - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Manuela Minaudo</td>
-              <td><br>Medical Director - Expert inemergency medicine and first aid - Ordinary Member of E.Di.Ma.S.</td>
-            </tr>
-            <tr>
-              <td><br>Valentina Zoppo</td>
-              <td><br>Senior Manager - Ordinærtmedlem af E.Di.Ma.S</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="sectionContainer" id="reportsContainer">
-
-    </section>
-
-    <section class="sectionContainer" id="projectsContainer">
-
-    </section>
-
-  </section>
-  <footer id="site-footer">
-    <div class="container">
-      <div class="row">
-        <div id="aboutFooter" class="col-sm-12 col-md-6">
-          <h6 class="lang" key="about">About</h6>
-          <hr>
-          <p class="text-justify lang" key="aboutText">
-            The European Commission's support for the production of this publication does not constitute an endorsement
-            of the contents, which reflect the view only of the authors, and the Commission cannot be held resposible
-            for any use which may be made of the information contained therein.
-          </p>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <h6 class="lang" key="quickLinks">Quick Links</h6>
-          <hr>
-          <div style="display: flex; justify-content: space-between;">
-            <ul class="footer-links">
-              <li><a class="lang" key="overview" href="#container">Overview</a></li>
-              <li><a class="lang" key="generalInfo" href="#staticBackdropLabel">General Information</a></li>
-              <li><a class="lang" key="h3Scope" href="#scope">Scope</a></li>
-              <li><a class="lang" key="partnersGroup" href="#partners">Partners</a></li>
-              <li><a class="lang" key="h3IntellectualOutputs" href="#intellectualOutputs">Intellectual Outputs</a></li>
-              <li><a class="lang" key="activities-content" href="#activities">Other Activities</a></li>
-            </ul>
-            <ul class="footer-links">
-              <li><a class="lang" key="h3NewsWithImages" href="#newsWithImagesContainer">News</a></li>
-              <li><a class="lang" key="members" href="#membersContainer">Members</a></li>
-              <li><a class="lang" key="h3teamEdimas" href="#teamEdimas">BREADI project team of E.Di.Ma.S</a></li>
-              <li><a class="lang" key="reports" href="#reportsContainer">Reports</a></li>
-              <li><a class="lang" key="relatedProjects" href="#projectsContainer">Related Projects</a></li>
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text lang" key="footerFundingText">The project is funded by AEI with the code PID2020-115456RB-I00 /MCIN/AEI /10.13039/501100011033.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a target="_blank" href="https://www.icra.cat/"><img class="footerImage" src="./images/icra.svg" alt="ICRA logo"></a></li>
+              <li><a target="_blank" href="https://www.udg.edu/ca/"><img class="footerImage" src="./images/udg.png" alt="UdG logo"></a></li>
+              <li><img src="./images/micin-aei.png" alt="micin-aei logo"></li> 
             </ul>
           </div>
         </div>
       </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text lang" key="footerFundingText">The project is funded by Erasmus+ Programme of the
-            European Union with the code
-            2019-1-IT02-KA-20203-079807.
-
-          </p>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <ul class="social-icons">
-            <li><a href="https://www.facebook.com/people/Project-B-Readi/100090163643753/">
-                <img src="./imagesB-READI/facebook.png" class="facebook" alt="facebook logo" width="55"></a>
-            </li>
-            <li><img src="./imagesB-READI/eu.png" alt="eu logo" width="200"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="./JavaScript/dynamicObjects.js"></script>
-  <script src="./JavaScript/languages.js"></script>
-  <script src="./JavaScript/app.js"></script>
-  <script src="./JavaScript/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./JavaScript/dynamicObjects.js"></script>
+    <script src="./JavaScript/languages.js"></script>
+    <script src="./JavaScript/app.js"></script>
+    <script src="./JavaScript/footer.js"></script>
 </body>
-
 </html>
