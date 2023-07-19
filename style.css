@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Sora', sans-serif;
-    background-color: #26272b;
+    background-color: #f8f9fa;
 }
 
 ul {
@@ -310,7 +310,7 @@ h3 {
     flex-direction: column;
     flex-basis: 50%;
     text-align: justify;
-    width: 560px;
+    width: 29.17vw;
     max-width: 560px;
     padding: 30px;
     border-radius: 25px;
@@ -319,6 +319,13 @@ h3 {
     background: #F0FFFF;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+@media (max-width: 1500px) {
+    .newsDiv {
+        padding: 15px;
+        flex-basis: 100%;
+    }
 }
 
 .newsImage {
